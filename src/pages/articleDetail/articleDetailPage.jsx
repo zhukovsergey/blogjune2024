@@ -74,7 +74,7 @@ const articleDetailPage = () => {
               ultricies.
             </p>
           </div>
-          <CommentsContainer className="mt-10" />
+          <CommentsContainer className="mt-10" logginedUserId="a" />
         </article>
         <SuggestedPosts
           header={"Последние статьи"}
