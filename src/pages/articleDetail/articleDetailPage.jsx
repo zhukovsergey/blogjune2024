@@ -3,6 +3,7 @@ import BreadCrumbs from "../../components/BreadCrumbs";
 import MainLayout from "../../components/MainLayout";
 import SuggestedPosts from "./container/SuggestedPosts";
 import CommentsContainer from "../../components/comments/CommentsContainer";
+import SocialShareButtons from "../../components/SocialShareButtons";
 
 const breadCrumbsData = [
   {
@@ -76,12 +77,23 @@ const articleDetailPage = () => {
           </div>
           <CommentsContainer className="mt-10" logginedUserId="a" />
         </article>
-        <SuggestedPosts
-          header={"Последние статьи"}
-          posts={postsData}
-          tags={tagsData}
-          className="mt-8 lg:mt-0 lg:max-w-xs"
-        />
+        <div>
+          <SuggestedPosts
+            header={"Последние статьи"}
+            posts={postsData}
+            tags={tagsData}
+            className="mt-8 lg:mt-0 lg:max-w-xs"
+          />
+          <div className="mt-7">
+            <h2 className="font-roboto font-medium text-dark-hard mb-4 md:text-xl">
+              Поделиться:
+            </h2>
+            <SocialShareButtons
+              url={encodeURI("https://etalon48.com")}
+              title={encodeURIComponent("Vkontakte")}
+            />
+          </div>
+        </div>
       </section>
     </MainLayout>
   );
